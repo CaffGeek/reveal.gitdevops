@@ -44,7 +44,7 @@
 					<h1>Git and DevOps</h1>
 					<h3></h3>
 					<p>
-						<small>Created by Chad Hurd / <a href="http://twitter.com/caffgeek">@caffgeek</a></small>
+						<small>Created by Chad Hurd / <a target="_blank" href="http://twitter.com/caffgeek">@caffgeek</a></small>
 					</p>
 					<aside class="notes">
 						<ul>
@@ -157,8 +157,8 @@
 						<h2>Resources</h2>
 						<p>
 							<ul>
-								<li><a href="https://try.github.io/levels/1/challenges/1">Interactive git demo!</a></li>
-								<li><a href="http://www.git-tower.com/learn/git/ebook/command-line/advanced-topics/undoing-things">Undoing Things in Git</a></li>
+								<li><a target="_blank" href="https://try.github.io/levels/1/challenges/1">Interactive git demo!</a></li>
+								<li><a target="_blank" href="http://www.git-tower.com/learn/git/ebook/command-line/advanced-topics/undoing-things">Undoing Things in Git</a></li>
 							</ul>
 						</p>
 					</section>
@@ -169,8 +169,8 @@
 						<h2>Tooling around Git</h2>
 
 						<ul>
-							<li><a href="https://developer.github.com/webhooks">https://developer.github.com/webhooks</a></li>
-							<li><a href="https://github.com/github/github-services">https://github.com/github/github-services</a></li>
+							<li><a target="_blank" href="https://developer.github.com/webhooks">https://developer.github.com/webhooks</a></li>
+							<li><a target="_blank" href="https://github.com/github/github-services">https://github.com/github/github-services</a></li>
 						</ul>
 
 						<aside class="notes">
@@ -225,7 +225,7 @@
 
 						<p><img src="images/travis-ci.png" /></p>
 
-						<a href="https://travis-ci.org/">https://travis-ci.org/</a>
+						<a target="_blank" href="https://travis-ci.org/">https://travis-ci.org/</a>
 
 						<p></p>
 
@@ -250,10 +250,22 @@
 						<h2>Travis CI</h2>
 
 						<p><img src="images/travis-ci-screen1.png" /></p>
+					</section>
+					
+					<section>
+						<h2>Sample .travis.yml</h2>
+						
+						<pre><code class="yml" data-trim>
+language: node_js
+node_js:
+  - "0.10"
+notifications:
+  slack: caffgeek:coKj2K5otFWUcZ6e8hY3h8Rn
+						</code></pre>
 
 						<aside class="notes">
 							<ul>
-								<li>There can be a lot to configure</li>
+								<li>Not very complex</li>
 								<li>You have a console log to see what's going on</li>
 							</ul>
 						</aside>
@@ -265,11 +277,55 @@
 						<h2>Code Climate</h2>
 
 						<p><img src="images/codeclimate.png"></p>
+						
+						<a target="_blank" href="https://codeclimate.com">https://codeclimate.com</a>
 
 						<aside class="notes">
 							<p>Ruby, JavaScript, PHP (Beta), Python (Beta)</p>
 							<p>Automatically open issues for code smells - http://github-service-universe.kimminich.de/#/18/6</p>
 						</aside>
+					</section>
+
+					<section>
+						<h2>Overview</h2>
+
+						<p><img src="images/codeclimate-screen1.png" /></p>
+					</section>
+
+					<section>
+						<h2>Repos at a Glance</h2>
+
+						<p><img src="images/codeclimate-screen2.png" /></p>
+					</section>
+
+					<section>
+						<h2>Dashboard of Repo</h2>
+
+						<p><img src="images/codeclimate-screen3.png" /></p>
+					</section>
+
+					<section>
+						<h2>Issue Breakdown</h2>
+
+						<p><img src="images/codeclimate-screen4.png" /></p>
+					</section>
+					
+					<section>
+						<h2>Graphs</h2>
+
+						<p><img src="images/codeclimate-screen5.png" /></p>
+					</section>
+					
+					<section>
+						<h2>Sample</h2>
+
+						<p><img src="images/codeclimate-screen6.png" /></p>
+					</section>
+					
+					<section>
+						<h2>Create Tickets</h2>
+
+						<p><img src="images/codeclimate-screen7.png" /></p>
 					</section>
 				</section>
 
@@ -278,6 +334,8 @@
 						<h2>VersionEye</h2>
 
 						<p><img src="images/versioneye.png"></p>
+						
+						<a target="_blank" href="https://www.versioneye.com/">https://www.versioneye.com/</a>
 
 						<aside class="notes">
 							<p>watches your repositories package.json and bower.json</p>
