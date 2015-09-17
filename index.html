@@ -35,8 +35,7 @@
 	</head>
 
 	<body>
-		<div class="reveal"
-				 style="background-image: url(images/background.jpg); background-size: 2560px 1600px; background-position: 0px 0px;">
+		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
@@ -65,7 +64,7 @@
 						<aside class="notes">
 							<p>Branches are FAST and Easy</p>
 							<p>Undo almost everything</p>
-							<p>local/offlien source control</p>
+							<p>local/offline source control</p>
 							<p>Everyone has a copy of the FULL repository</p>
 							<p>Language agnostic</p>
 						</aside>
@@ -115,24 +114,24 @@
 						<h2>Use the CLI - Cheatsheet</h2>
 
 						<pre><code class="sh" data-trim>
-	#create a new repository
-	git init 
+#create a new repository
+git init 
 
-	#clone a repository
-	git clone http://gihub.com/caffgeek/reveal.gitdevops 
+#clone a repository
+git clone http://gihub.com/caffgeek/reveal.gitdevops 
 
-	#get the changes from the server
-	git pull #basically a fetch then merge
+#get the changes from the server
+git pull #basically a fetch then merge
 
-	#check what has changed
-	git status 
+#check what has changed
+git status 
 
-	#commit changes locally
-	git add -A #stages all changes
-	git commit -m "checkin message"
+#commit changes locally
+git add -A #stages all changes
+git commit -m "checkin message"
 
-	#push changes to git server
-	git push
+#push changes to git server
+git push
 						</code></pre>
 
 						<aside class="notes">
@@ -271,15 +270,23 @@
 						<p><img src="images/git-rebase3.png"></p>
 						
 						<aside class="notes">
-							<p>Golden Rule</p>
-							<p>NEVER rebase a public branch</p>
 						</aside>
 					</section>
 					
 					<section>
-						<h2>Git Demo</h2>
+						<h2>Golden Rule of Rebasing</h2>
+						
+						<blockquote cite="https://www.atlassian.com/git/tutorials/merging-vs-rebasing/the-golden-rule-of-rebasing">
+							The golden rule of git rebase is to <b>never</b> use it on public branches.
+						</blockquote>
+						
+						<aside class="notes">
+							<p>If you need to "push -f"</p>
+							<p>you are rewriting history</p>
+							<p>peers don't have those changes</p>
+						</aside>
 					</section>
-
+					
 					<section>
 						<h2>Resources</h2>
 						<p>
@@ -447,9 +454,28 @@ notifications:
 					</section>
 					
 					<section>
+						<h2>YAML</h2>
+
+						<p><img src="images/codeclimate-screen8.png" /></p>
+						
+						<aside class="notes">
+							<p>exclude paths</p>
+							<p>specific languages</p>
+							<p>instead of guessing</p>
+						</aside>
+					</section>
+					
+					<section>
 						<h2>Create Tickets</h2>
 
 						<p><img src="images/codeclimate-screen7.png" /></p>
+						
+						<aside class="notes">
+							<p>Jira</p>
+							<p>GitHub Issues</p>
+							<p>Pivotal</p>
+							<p>No trello(?)</p>
+						</aside>
 					</section>
 				</section>
 
