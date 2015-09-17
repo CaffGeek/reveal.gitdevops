@@ -47,13 +47,11 @@
 						<small>Created by Chad Hurd / <a target="_blank" href="http://twitter.com/caffgeek">@caffgeek</a></small>
 					</p>
 					<aside class="notes">
-						<ul>
-							<li>Introduction</li>
-							<li>Why Git?</li>
-							<li>Command Line Walkthrough</li>
-							<li>webhooks and service hooks</li>
-							<li>if time, Vagrant</li>
-						</ul>
+						<p>Introduction</p>
+						<p>Why Git?</p>
+						<p>Command Line Walkthrough</p>
+						<p>Leverage Git with Webhooks</p>
+						<p>If time, Vagrant</p>
 					</aside>
 				</section>
 
@@ -65,13 +63,11 @@
 						</p>
 
 						<aside class="notes">
-							<ul>
-								<li>Branches are FAST and Easy</li>
-								<li>Undo almost everything</li>
-								<li>local/offlien source control</li>
-								<li>Everyone has a copy of the FULL repository</li>
-								<li>Language agnostic</li>
-							</ul>
+							<p>Branches are FAST and Easy</p>
+							<p>Undo almost everything</p>
+							<p>local/offlien source control</p>
+							<p>Everyone has a copy of the FULL repository</p>
+							<p>Language agnostic</p>
 						</aside>
 					</section>
 
@@ -79,26 +75,26 @@
 						<h2>Eclipse Community Survey 2014</h2>
 						<img src="images/gitvssvn.png" />
 						<aside class="notes">
-							Mostly JAVA sdevs
+							Mostly JAVA devs
 							<h4>Git:</h4>
-							<ul>
-							<li>2009: 2.4%
-							<li>2010: 6.8%
-							<li>2011: 12.8%
-							<li>2012: 27.6%
-							<li>2013: 30.3%
-							<li>2014: 33.3%
-							</ul>
+							<pre>
+2009: 2.4%
+2010: 6.8%
+2011: 12.8%
+2012: 27.6%
+2013: 30.3%
+2014: 33.3%
+							</pre>
 
 							<h4>Subversion:</h4>
-							<ul>
-							<li>2009: 57.5%
-							<li>2010: 58.3%
-							<li>2011: 51.3%
-							<li>2012: 46.0%
-							<li>2013: 37.8%
-							<li>2014: 30.7%
-							</ul>
+							<pre>
+2009: 57.5%
+2010: 58.3%
+2011: 51.3%
+2012: 46.0%
+2013: 37.8%
+2014: 30.7%
+							</pre>
 						</aside>
 					</section>
 
@@ -108,11 +104,10 @@
 						<img src="images/tfsgit.png" />
 
 						<aside class="notes">
-							<ul>
-								<li>Team Foundation Version Control</li>
-								<li>Standards compliant, not custom git</li>
-								<li>Git, based on libgit2 (same as github)</li>
-							</ul>
+							<p>Team Foundation Version Control</p>
+							<p>Standards compliant, not custom git</p>
+							<p>Git, based on libgit2 (same as github)</p>
+							<p>Industry Support</p>
 						</aside>
 					</section>
 
@@ -141,16 +136,47 @@
 						</code></pre>
 
 						<aside class="notes">
-							<ul>
-								<li>GUIs are great, once you understand what's happening under the hood</li>
-								<li>Learn how it works better on the CLI</li>
-								<li>Command line is faster, I didn't go back to the GUI</li>
-							</ul>
+							<p>GUIs are great, once you understand what's happening under the hood</p>
+							<p>Learn how it works better on the CLI</p>
+							<p>Command line is faster, I didn't go back to the GUI</p>
 						</aside>
 					</section>
 
 					<section>
-						<h2>Git Demo</h2>					
+						<h2>Git is Distributed</h2>
+						
+						<p><img src="images/git-screen2.PNG"></p>
+						
+						<aside class="notes">
+							<p>Still a central server (normally)</p>
+							<p>Each node has a full repo</p>
+							<p>Share without using central server</p>
+							<p>100% Redundancy</p>
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Local Commits</h2>
+						
+						<p><img src="images/git-status.PNG."></p>
+						
+						<aside class="notes">
+							<p>commit to your local repository</p>
+							<p>push to the remote repository</p>
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Branches are Pointers</h2>
+						
+						<aside class="notes">
+							<p>Branches are insanely fast, they are just a pointer</p>
+							<p>Like a Linked List</p>
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Git Demo</h2>
 					</section>
 
 					<section>
@@ -174,10 +200,8 @@
 						</ul>
 
 						<aside class="notes">
-							<ul>
-								<li>Webhooks = new</li>
-								<li>github-services = old</li>
-							</ul>
+							<p>Webhooks = new</p>
+							<p>github-services = old</p>
 						</aside>
 					</section>
 
@@ -185,11 +209,9 @@
 						<h2>WebHooks</h2>
 
 						<aside class="notes">
-							<ul>
-								<li>Build integrations</li>
-								<li>Subscribe to events on GitHub.com (fork, delete, create, etc)</li>
-								<li>Send HTTP POST payload</li>
-							</ul>
+							<p>Build integrations</p>
+							<p>Subscribe to events on GitHub.com (fork, delete, create, etc)</p>
+							<p>Send HTTP POST payload</p>
 						</aside>
 					</section>
 
