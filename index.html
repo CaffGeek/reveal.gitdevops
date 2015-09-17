@@ -535,9 +535,80 @@ notifications:
 					<section>
 						<h2>Vagrant</h2>
 
-						<ul>
+						<p><img src="images/vagrant-logo.png"></p>
+						
+						<a href="https://www.vagrantup.com/">https://www.vagrantup.com/</a>
 
-						</ul>
+						<aside class="notes">
+							<p>single file description of a machine</p>
+							<p>base image</p>
+							<p>provision</p>
+							<p>configure</p>
+							<p>virtual box</p>
+						</aside>
+					</section>
+					
+					<section>
+						<h2>VagrantFile</h2>
+
+						<pre><code class="ruby" data-trim>
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+	config.vm.box = "hashicorp/precise32"
+	
+	config.vm.network "forwarded_port", guest: 1337, host: 8337
+	
+	config.vm.synced_folder ".", "/vagrant"
+		
+	config.vm.provision "shell", path: "sh/provision.sh"
+	config.vm.provision "shell", path: "sh/startup.sh", run: "always"
+end
+						</code></pre>
+					</section>
+					
+					<section>
+						<h2>provision.sh</h2>
+
+						<pre><code class="sh" data-trim>
+# Change the hostname so we can easily identify what environment we're on:
+echo "nodejs-vagrant" > /etc/hostname
+# Update /etc/hosts to match new hostname to avoid "Unable to resolve hostname" issue:
+echo "127.0.0.1 nodejs-vagrant" >> /etc/hosts
+# Use hostname command so that the new hostname takes effect immediately without a restart:
+hostname nodejs-vagrant
+
+# Install core components
+apt-get update
+
+# Install build tools
+apt-get install -y make g++ git curl vim libcairo2-dev libav-tools nfs-common portmap
+
+# Install Node.js
+# Modified from https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
+apt-get update
+apt-get install -y python-software-properties python g++ make
+add-apt-repository -y ppa:chris-lea/node.js
+apt-get update
+apt-get install -y nodejs
+apt-get install screen
+
+npm install supervisor -g
+						</code></pre>
+					</section>
+					
+					<section>
+						<h2>startup.sh</h2>
+
+						<pre><code class="sh" data-trim>
+echo "Running node-supervisor with screen"
+screen -d -m /vagrant/sh/node-supervisor.sh
+						</code></pre>
+						
+						<h2>node-supervisor.sh</h2>
+
+						<pre><code class="sh" data-trim>supervisor --watch /vagrant /vagrant/server.js</code></pre>
 					</section>
 				</section>
 			
